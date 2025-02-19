@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.white,
     height: '100%',
-    paddingTop: horizontalScale(59),
+    // paddingTop: horizontalScale(59),
     paddingHorizontal: verticalScale(18),
     paddingBottom: 150
   },
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
 
   desc: {
-    color: Colors.gray10,
+    color: Colors.gray40,
     fontFamily: Fonts.type.poppinsRegular,
     fontWeight: Fonts.Weight.low,
     fontSize: 10
@@ -134,6 +134,26 @@ const styles = StyleSheet.create({
     fontWeight: Fonts.Weight.semi,
     fontSize: 12,
     marginTop: 2
+  },
+  deleteView: {
+    // alignSelf: 'center',
+    justifyContent: 'center',
+    backgroundColor: Colors.white,
+    marginTop: verticalScale(9),
+    // marginHorizontal: horizontalScale(18),
+    borderRadius: 22,
+    height: 38,
+    width: 133,
+    borderWidth: 1,
+    borderColor: Colors.black
+  },
+  deleteText: {
+    color: Colors.black,
+    fontFamily: Fonts.type.poppinsSemiBold,
+    fontWeight: Fonts.Weight.semi,
+    fontSize: 12,
+    textAlign: 'center'
+    // paddingVertical: verticalScale(11)
   }
 });
 
