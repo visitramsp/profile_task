@@ -7,6 +7,7 @@ const Colors = {
   gray: 'rgba(118, 118, 118, 1)',
   gray20: 'rgba(67, 67, 67, 1)',
   gray10: 'rgba(230, 230, 230, 1)',
-  gray40: 'rgba(159, 157, 158, 1)'
+  gray40: 'rgba(159, 157, 158, 1)',
+  red: 'rgba(255, 0, 0, 1)'
 };
 export { Colors };

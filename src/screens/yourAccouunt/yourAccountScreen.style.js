@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     color: Colors.black
   },
   errorText: {
-    color: Colors.gray40,
+    color: Colors.red,
     fontFamily: Fonts.type.poppinsSemiBold,
     fontWeight: Fonts.Weight.semi,
     fontSize: 12,

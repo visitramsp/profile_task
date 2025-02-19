@@ -19,9 +19,7 @@ import WelcomeScreen from '../../components/SplashScreen/WelcomeScreen';
 import { NAVIGATE_MODE, SCREEN_NAME } from '../../constants';
 import CurrentOrder from '../../screens/logistic/DriverScreen/CurrentOrder/CurrentOrder';
 import WarehouseScreen from '../../screens/profile/warehouseScreen/WarehouseScreen';
-import CompanyDetailScreen from '../../screens/profile/CompanyDetailScreen/CompanyDetailScreen';
 import SettingScreen from '../../screens/profile/settingScreen/SettingScreen';
-import ChangePasswordScreen from '../../screens/profile/changePasswordScreen/ChangePasswordScreen';
 import SupportScreen from '../../screens/profile/supportScreen/SupportScreen';
 import EmailUsScreen from '../../screens/profile/emailUsScreen/EmailUsScreen';
 import liveChatScreen from '../../screens/profile/liveChatScreen/LiveChatScreen';
@@ -41,7 +39,6 @@ import AddOutlet from '../../screens/Retailer/Account/Outlets/AddOutlet';
 import ComingSoonScreen from '../../screens/commingSoon/ComingSoonScreen';
 import TermsAndConditionScreen from '../../screens/termConditionModal/TermsAndConditionScreen';
 import ReviewFeedbackScreen from '../../screens/profile/reviewFeedbackScreen/ReviewFeedbackScreen';
-import CategoryProductScreen from '../../screens/categoryProduct/CategoryProductScreen';
 import DeleteProduct from '../../screens/Vendor/Product/DeleteProduct';
 import UniversalCategoryScreen from '../../screens/universal/universalCategoryScreen/UniversalCategoryScreen';
 import UniversalHomeScreen from '../../screens/universal/universalHomeScreen/UniversalHomeScreen';
@@ -49,7 +46,6 @@ import UniversalHomeScreen from '../../screens/universal/universalHomeScreen/Uni
 import UniversalProductList from '../../screens/universal/products/UniversalProductList';
 import UniversalProductDetail from '../../screens/universal/products/UniversalProductDetail';
 import ReferAndEarnScreen from '../../screens/universal/referAndEarn/ReferAndEarn';
-import ReferralList from '../../screens/referralList/ReferralList';
 import OrderDetails from '../../screens/Vendor/Order/OrderDetails';
 import WholesaleScreen from '../../screens/Retailer/WholesalesPage/Wholesales';
 import ProductDetails from '../../screens/Retailer/WholesalesPage/ProductDetails';
@@ -58,7 +54,7 @@ import PrivacySecurityScreen from '../../screens/profile/privacySecurityScreen/P
 import InventryManagementScreen from '../../screens/Vendor/vendorDrawer/InventryManagementScreen/InventryManagementScreen';
 import DeleteAccountScreen from '../../screens/profile/deleteAccountScreen/DeleteAccountScreen';
 import NotificationAndAlertScreen from '../../screens/profile/notificationAndAlertScreen/NotificationAndAlertScreen';
-import ConfirmOrder from '../../screens/Retailer/ConfirmOrder';
+
 import AboutUsScreen from '../../screens/universal/AboutUsScreen/AboutUsScreen';
 import InventorySync from '../../screens/Vendor/InventorySync';
 import UniversalKeyInfoScreen from '../../screens/universal/universalHomeScreen/UniversalKeyInfoScreen';
@@ -94,111 +90,7 @@ const AppStack = () => {
         // cardStyle: { opacity: 1,backgroundColor: 'transparent' }
       }}
       detachInactiveScreens={false}
-    >
-      <Stack.Screen name="VendorDrawer" component={VendorDrawer} />
-      <Stack.Screen name="retailerDrawer" component={RetailerDrawer} />
-      <Stack.Screen
-        name="logisticPartnerDrawer"
-        component={LogisticPartnerDrawer}
-      />
-      <Stack.Screen name="driverDrawer" component={DriverDrawer} />
-      <Stack.Screen name="currentOrder" component={CurrentOrder} />
-      <Stack.Screen name="ReferralList" component={ReferralList} />
-      {/* <Stack.Screen
-        name="UniversalCategoryScreen"
-        component={UniversalCategoryScreen}
-      /> */}
-      {/* <Stack.Screen name="verifypassword" component={VerifyPassword} /> */}
-      <Stack.Screen name="dashboard" component={Dashboard} />
-      {/* <Stack.Screen name="retailerIndex" component={RetailerIndex} /> */}
-      <Stack.Screen name="logisticIndex" component={LogisticIndex} />
-      <Stack.Screen name="products" component={Products} />
-      <Stack.Screen name="orders" component={Orders} />
-      <Stack.Screen name="datepick" component={Datepicker} />
-      <Stack.Screen name={'OrderDetails'} component={OrderDetails} />
-      <Stack.Screen
-        name={SCREEN_NAME.NOTIFICATION_SCREEN}
-        component={NotificationScreen}
-      />
-      <Stack.Screen name={'userManagement'} component={UserManagement} />
-      <Stack.Screen name={'User'} component={Users} />
-      <Stack.Screen name="addProduct" component={AddProduct} />
-      {/* live-chat  start */}
-      {/* <Stack.Screen name="whatsapp" component={WhatsApp} /> */}
-      {/*live-chat end */}
-      {/* Pending ORder start */}
-      <Stack.Screen name="addOutlet" component={AddOutlet} />
-      <Stack.Screen name="socket" component={Socket} />
-      <Stack.Screen name="warehouseScreen" component={WarehouseScreen} />
-      <Stack.Screen
-        name="companyDetailScreen"
-        component={CompanyDetailScreen}
-      />
-      <Stack.Screen name="settingScreen" component={SettingScreen} />
-      <Stack.Screen
-        name="changePasswordScreen"
-        component={ChangePasswordScreen}
-      />
-
-      <Stack.Screen
-        name="DeleteAccountScreen"
-        component={DeleteAccountScreen}
-      />
-      <Stack.Screen
-        name="PrivacySecurityScreen"
-        component={PrivacySecurityScreen}
-      />
-      <Stack.Screen name="supportScreen" component={SupportScreen} />
-      <Stack.Screen name="emailUsScreen" component={EmailUsScreen} />
-      <Stack.Screen name="faqScreen" component={FaqScreen} />
-      <Stack.Screen name="liveChatScreen" component={liveChatScreen} />
-      <Stack.Screen name="wishlistScreen" component={WishlistScreen} />
-      {/* <Stack.Screen name="addRequestScreen" component={AddRequestScreen} /> */}
-      <Stack.Screen name="deliveriesScreen" component={DeliveriesScreen} />
-      <Stack.Screen name="driverStatusScreen" component={DriverStatusScreen} />
-      <Stack.Screen name="addDriverScreen" component={AddDriverScreen} />
-      <Stack.Screen name="orderDetailScreen" component={OrderDetailScreen} />
-      <Stack.Screen
-        name="categoryProductScreen"
-        component={CategoryProductScreen}
-      />
-      <Stack.Screen
-        name="driverVehicleScreen"
-        component={DriverVehicleScreen}
-      />
-      <Stack.Screen name="comingSoonScreen" component={ComingSoonScreen} />
-      <Stack.Screen
-        name={SCREEN_NAME.INVENTORY_SYNC}
-        component={InventorySync}
-      />
-      <Stack.Screen
-        name="termsAndConditionScreen"
-        component={TermsAndConditionScreen}
-      />
-      <Stack.Screen
-        name="reviewFeedbackScreen"
-        component={ReviewFeedbackScreen}
-      />
-      <Stack.Screen
-        name="financialManagement"
-        component={FinancialManagementScreen}
-      />
-      <Stack.Screen
-        name="InventryManagementScreen"
-        component={InventryManagementScreen}
-        options={{ unmountOnBlur: true }}
-      />
-      <Stack.Screen
-        name="notificatationAndAlertScreen"
-        component={NotificationAndAlertScreen}
-      />
-      <Stack.Screen name="support" component={SupportScreen} />
-      <Stack.Screen name={'productDetails'} component={ProductDetails} />
-      <Stack.Screen name="deleteProduct" component={DeleteProduct} />
-      {/* <Stack.Screen name="restockRefreshScreen" component={WholesaleScreen} /> */}
-      <Stack.Screen name="orderes" component={Orderes} />
-      <Stack.Screen name={SCREEN_NAME.CONFIRM_ORDER} component={ConfirmOrder} />
-    </Stack.Navigator>
+    ></Stack.Navigator>
   );
 };
 

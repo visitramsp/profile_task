@@ -13,11 +13,9 @@ import {
 import RequestProduct from './RequestProduct';
 import AnimatedDrawer from '../../components/AnimatedDrawer';
 import AddRequestScreen from './addRequestScreen/AddRequestScreen';
-import CartScreen from '../cartScreen/CartScreen';
 import AccountStack from '../profile';
 import { CartStore } from '../../staticStore/CartStore';
 import WholesaleScreen from './WholesalesPage/Wholesales';
-import CategoryProductScreen from '../categoryProduct/CategoryProductScreen';
 import ProductDetails from './WholesalesPage/ProductDetails';
 import { SCREEN_NAME } from '../../constants';
 import UniversalCategoryScreen from '../universal/universalCategoryScreen/UniversalCategoryScreen';
@@ -70,7 +68,6 @@ export default function RetailerIndex() {
           component={WholesalesIndex}
         />
         <Tab.Screen name={account} component={AccountStack} />
-        <Tab.Screen name={cart} component={CartScreen} />
       </Tab.Navigator>
     </AnimatedDrawer>
   );
@@ -87,10 +84,7 @@ const StackDashboard = () => {
       <Stack.Screen name={requestProduct} component={RequestProduct} />
       <Stack.Screen name={'addRequestScreen'} component={AddRequestScreen} />
       <Stack.Screen name="restockRefreshScreen" component={WholesaleScreen} />
-      <Stack.Screen
-        name="categoryProductScreen"
-        component={CategoryProductScreen}
-      />
+
       <Stack.Screen
         name="productDetails"
         component={ProductDetails}
