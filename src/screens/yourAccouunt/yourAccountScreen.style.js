@@ -154,6 +154,19 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center'
     // paddingVertical: verticalScale(11)
+  },
+  passView: {
+    // backgroundColor: 'red',
+    width: 200,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: Colors.orange30,
+    borderRadius: 8
+  },
+  passInput: {
+    width: 175,
+    borderWidth: 0
   }
 });
 

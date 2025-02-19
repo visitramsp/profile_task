@@ -1,11 +1,7 @@
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
-import { Container } from '../../components'
-import { Colors } from '../../theme'
 import styles from './settingScreenNew.style'
-import FastImage from 'react-native-fast-image'
 import { ArrowLeft } from '../../assets/icon'
-import backImage from "././../../assets/imageTask/Back.png"
 import Bell from "././../../assets/imageTask/bell.png"
 import Document from "././../../assets/imageTask/document.png"
 import Profile from "././../../assets/imageTask/profile.png"
@@ -62,7 +58,6 @@ export default function SettingScreenNew() {
   return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
-          {/* <FastImage style={styles.backImage} source={backImage} /> */}
           <ArrowLeft/>
           <Text style={styles.heading}>Settings</Text>
         </View>
@@ -78,7 +73,7 @@ export default function SettingScreenNew() {
               dummyArrOne?.map((item,index)=>
               
              (index==0 || index===1 || index===2 || index===5 || index===6 || index===7 || index===8) ?
-              <TouchableOpacity onPress={()=>navigation.navigate("yourAccountScreen")} key={index} style={styles.rowView}>
+              <TouchableOpacity onPress={()=> index==0 ? navigation.navigate("yourAccountScreen") : null} key={index} style={styles.rowView}>
                 <Image source={item.image} />
                 <Text style={styles.rowText}>{item.text}</Text>
               </TouchableOpacity>

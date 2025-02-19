@@ -14,6 +14,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import ImageCropPicker from 'react-native-image-crop-picker';
 import { Colors } from '../../theme';
+import Icon from 'react-native-vector-icons/Entypo';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -33,6 +34,7 @@ const validationSchema = Yup.object().shape({
 });
 export default function YourAccountScreen() {
   const navigation = useNavigation();
+  const [securePassword, setSecurePassword] = useState(false);
   const [values, setValues] = useState({
     name: 'Jo sew',
     email: 'josew@example.com',
@@ -72,9 +74,7 @@ export default function YourAccountScreen() {
   };
 
   return (
-    <ScrollView style={styles.container}
-    
-    >
+    <ScrollView style={styles.container}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <ArrowLeft />
@@ -150,7 +150,11 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter Name"
-                      style={[styles.input, touched.name && errors.name && {borderColor:Colors.red}]}
+                      style={[
+                        styles.input,
+                        touched.name &&
+                          errors.name && { borderColor: Colors.red }
+                      ]}
                       value={values.name}
                       onChangeText={handleChange('name')}
                     />
@@ -213,8 +217,13 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter email"
-                      style={[styles.input,[touched.email && errors.email && {borderColor:Colors.red}]]}
-                      
+                      style={[
+                        styles.input,
+                        [
+                          touched.email &&
+                            errors.email && { borderColor: Colors.red }
+                        ]
+                      ]}
                       value={values.email}
                       onChangeText={handleChange('email')}
                     />
@@ -275,13 +284,36 @@ export default function YourAccountScreen() {
               {({ handleChange, handleSubmit, values, errors, touched }) => (
                 <>
                   <View style={styles.inputFieldView}>
-                    <TextInput
-                      placeholder="Enter password"
-                       style={[styles.input,[touched.password && errors.password && {borderColor:Colors.red}]]}
-                      
-                      value={values.password}
-                      onChangeText={handleChange('password')}
-                    />
+                    <View
+                      style={[
+                        styles.passView,
+                        [
+                          touched.password &&
+                            errors.password && { borderColor: Colors.red }
+                        ]
+                      ]}
+                    >
+                      <TextInput
+                        placeholder="Enter password"
+                        style={[styles.input, styles.passInput]}
+                        secureTextEntry={securePassword ? false : true}
+                        value={values.password}
+                        onChangeText={handleChange('password')}
+                      />
+                      <TouchableOpacity
+                        onPress={() => setSecurePassword(!securePassword)}
+                      >
+                        {securePassword ? (
+                          <Icon name="eye" size={20} color={Colors.black} />
+                        ) : (
+                          <Icon
+                            name="eye-with-line"
+                            size={20}
+                            color={Colors.gray}
+                          />
+                        )}
+                      </TouchableOpacity>
+                    </View>
 
                     <TouchableOpacity
                       style={styles.editBtn}
@@ -291,10 +323,13 @@ export default function YourAccountScreen() {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                      style={[styles.editBtn, { backgroundColor: 'black' }]}
+                      style={[
+                        styles.editBtn,
+                        { backgroundColor: Colors.black }
+                      ]}
                       onPress={handleSubmit}
                     >
-                      <Text style={[styles.editText, { color: 'white' }]}>
+                      <Text style={[styles.editText, { color: Colors.white }]}>
                         Save
                       </Text>
                     </TouchableOpacity>
@@ -341,8 +376,13 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter username"
-                      style={[styles.input,[touched.username && errors.username && {borderColor:Colors.red}]]}
-                      
+                      style={[
+                        styles.input,
+                        [
+                          touched.username &&
+                            errors.username && { borderColor: Colors.red }
+                        ]
+                      ]}
                       value={values.username}
                       onChangeText={handleChange('username')}
                     />
