@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "507918062316",
+    "firebase_url": "https://aqad-notification-default-rtdb.firebaseio.com",
+    "project_id": "aqad-notification",
+    "storage_bucket": "aqad-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507918062316:android:3142c480ada55511bccbc9",
+        "android_client_info": {
+          "package_name": "com.alqutubaldhahabi.supplymatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507918062316-200ssrkbeprpr8ufug5oupnckdanj7a6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alqutubaldhahabi.supplymatch",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "507918062316-h5beamab1806qf2clrfdb1n233uu15rj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alqutubaldhahabi.supplymatch",
+            "certificate_hash": "b4a98a590aedc07f71d6178d13e5301fe43647d9"
+          }
+        },
+        {
+          "client_id": "507918062316-6vce2hrqri8i9phi2mdddopf65obklfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoLEjpdscOeKOe_6pMzrTIiPIIOLSDwMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507918062316-6vce2hrqri8i9phi2mdddopf65obklfb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "507918062316-78u3b1ugt902ctethrl1q17jebuca69k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.omino"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507918062316:android:aed80c6ae9838e4dbccbc9",
+        "android_client_info": {
+          "package_name": "omni.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507918062316-6vce2hrqri8i9phi2mdddopf65obklfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoLEjpdscOeKOe_6pMzrTIiPIIOLSDwMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507918062316-6vce2hrqri8i9phi2mdddopf65obklfb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "507918062316-78u3b1ugt902ctethrl1q17jebuca69k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.omino"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

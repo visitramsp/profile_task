@@ -1,0 +1,29 @@
+{
+  "debug.allowBreakpointsEverywhere": true,
+  "files.autoGuessEncoding": true,
+  "breadcrumbs.enabled": false,
+  "editor.hover.enabled": true,
+  "cSpell.words": [
+    "allproduct",
+    "AQAD",
+    "BUSSINESS",
+    "ellipsize",
+    "EMIRATED",
+    "formdata",
+    "Formik",
+    "getallrefereduser",
+    "gradlew",
+    "IBAN",
+    "Inventry",
+    "netinfo",
+    "Pressable",
+    "Roboto",
+    "secondlast",
+    "sminy",
+    "Swipeable",
+    "textinput",
+    "UAEPASS",
+    "USERID"
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
+}

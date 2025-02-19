@@ -1,0 +1,121 @@
+import { Platform } from 'react-native';
+
+const API_CONSTANT = {
+  LIMIT: 10,
+  // BASE_URL: 'https://backend.aqad.ae/',
+  // BASE_URL: 'http://3.29.209.107:2000/',
+  BASE_URL: 'https://088b-103-83-80-142.ngrok-free.app/',
+  GOOGLE_API_KEY:
+    Platform.OS === 'android'
+      ? 'AIzaSyB-hKyID_oTDKgqN57zBkU5OcLnnu6BDq0'
+      : 'AIzaSyBt-4p-oFouZknk_qf7LcnQMGApyX-XX3U',
+  USER_LOGIN: 'api/user/login',
+  USER_LOGIN_WITH_OTP: 'api/user/login_with_otp',
+  USER_GET_FEATURES: 'api/user/getfeatures',
+  DELETE_OWN_ACCOUNT: 'api/user/delete_own_account',
+  USER_FORGET_WITH_SEND_OTP: 'api/user/forgot_password',
+  ORDER_ACCEPT_BY_VENDOR: 'api/order/order_accept_by_vendor',
+  USER_FORGET_WITH_VERIFY_OTP: 'api/user/verify_otp',
+  USER_FORGET_WITH_RESET_PASSWORD: 'api/user/reset_password',
+  USER_REGISTER: 'api/user/register',
+  REFER_EARN: 'api/refer_user/add',
+  REFERRAL_USER: 'api/refer_user/add_refer_user_details',
+  USER_REGISTER_BASE64: 'api/user/register_base64',
+
+  USER_TRADE_LICENSE: 'api/user/base64_trade_license_extract_data',
+  USER_RESIDENCE_VISA: 'api/user/base64_residence_visa_extact_data',
+  USER_IBAN_DOCS: 'api/user/base64_iban_extract_data',
+  USER_EMIRATES_DOCS: 'api/user/emirates_id_extract_data',
+  USER_TRN_NUMBER_VERIFY: 'api/user/trn_number_verify',
+
+  USER_REGISTER_OTP: 'api/user/send_otp_to_email',
+  USER_REGISTER_VERIFY_OTP: 'api/user/verfy_otp_with_email',
+  USER_PHONE_OTP: 'api/user/sendOtptoPhone',
+  USER_PHONE_VERIFY_OTP: 'api/user/phoneOtpVerify',
+  USER_LOGOUT: 'api/user/logout',
+  USER_INFO: 'api/user/check_user_logged_in',
+  USER_STATUS_CHANGE: 'api/user/status_user',
+  // Retailer
+  FETCH_CATEGORY: 'api/category/get',
+  FETCH_ABOUT_US: 'api/user/getaboutus',
+  FETCH_PRODUCT: 'api/product/get',
+  FETCH_PRODUCT_REQUEST: 'api/request_product/request',
+  FETCH_DASHBOARD_VENDOR: 'api/order/get_dashboard_data_vendor',
+  FETCH_ACCEPT_VENDOR: 'api/order/accept_request_by_vendor',
+  FETCH_RETAILER: 'api/user/getallrefereduser',
+  FETCH_RATAILER_REQUESTS: 'api/request_product/request?',
+  FETCH_RETAILER_HISTORY: 'api/user/getallrefereduser',
+  ORDER_BY_USERID: 'api/order/order_by_user_id',
+  USER_REFER: 'api/user/refer',
+  ACCEPT_ORDER_VENDOR: 'api/order/accept_order_by_vendor',
+  FETCH_FLASH_SALES: 'api/flash_sales_product/get_data_of',
+  GET_RETAILER: 'api/user/getalluser',
+  // Outlet
+  FETCH_WAREHOUSE: 'api/user/get_warehouse_or_retailer_address',
+  DELETE_WAREHOUSE: 'api/user/delete_warehouse_or_retailer_address',
+  SET_AS_DEFAULT: 'api/user/change_warehouse_or_retailer',
+  // cart
+  FETCH_CART_LIST: 'api/cart/fetch_data',
+  CART_ADD: 'api/cart/add',
+  DELETE_CART_ITEM: 'api/cart/delete_from_cart',
+  UPDATE_CART_ITEM: 'api/cart/update_quantity',
+  EMPTY_CART: 'api/cart/empty_cart',
+  FETCH_PRODUCT_BY_ID: 'api/product/get_by_id',
+  PRODUCT_RECOMMENDATION: 'api/product/get_product_by_cat_id',
+  PRODUCT_VARIATIONS: 'api/product/get_all_category_data',
+  PRODUCT_ADD_VARIANT: 'api/product/add_product_variant',
+  UNIVERSAL_DATA: 'api/category/get_universal_data',
+
+  //Vender
+
+  //  1) DashBoard API
+  // 2) Product Api
+  FETCH_ORDER_DATA: 'api/order/get',
+  FETCH_GET_BY_ORDER_ID: 'api/order/get_by_order_id?',
+  VENDER_PRODUCT_CATEGORY: 'api/category/get',
+  FLASH_SALE_DATA: 'api/flash_sales_product/get_data_of',
+  GET_CURRENT_ORDER: 'api/order/get_dashboard_Data_',
+  GET_REQUEST_PRODUCT: 'api/request_product/fetch_allproduct_Variant_request',
+  ADD_REQUEST_PRODUCT: 'api/request_product/add_request',
+  EDIT_REQUEST_PRODUCT: 'api/request_product/edit_data',
+  EDIT_FLASH_SALES: 'api/flash_sales_product/edit_data',
+  GET_REQUEST_PRODUCT_LIST: 'api/request_product/get_data_of',
+  ADD_REMOVE_WISHLIST: 'api/wishlist/addorremovetowishlist',
+  FETCH_WISHLIST: 'api/wishlist/fetchwishlistdata',
+  FETCH_PRODUCT_VAR: 'api/product/fetch_allproduct_var',
+  ADD_FLASH_PRODUCT: 'api/flash_sales_product/add',
+  EMAIL_REQUEST: 'api/fieldexec/emailrequest',
+  REVIEW_FEEDBACK: 'api/fieldexec/rateordervendorandlogistic',
+  CHANGE_PASSWORD: 'api/user/change_password',
+  UPDATE_PROFILE: 'api/user/editprofile',
+  FETCH_GETALL_TYPES: 'api/product/getData',
+  GET_CATEGORY: 'api/category/get',
+  ADD_PRODUCT: 'api/product/add',
+  ADD_PRODUCT_WITH_VARIANT: 'api/product/add_product_variant',
+  EDIT_PRODUCT_VARIANT: 'api/product/edit_product_variant',
+  DELETE_PRODUCT_VARIANT: 'api/product/delete_product_variant',
+  DELETE_PRODUCT_WITH_VARIANT: 'api/product/delete_product',
+  DELETE_REQUEST_PRODUCT: 'api/request_product/delete_',
+  DELETE_FLASH_INPUT: 'api/flash_sales_product/delete_',
+  ACTIVATE_PRODUCT_WITH_VARIANT: 'api/product/reactivate_product_by_vendor',
+  FETCH_ARCHIVE_PRODUCT: 'api/product/get_delete_vendor',
+  GET_FAQ: 'api/user_faq/getfaq',
+  // inventory
+  GET_INVENTORY: 'api/product/get_inventory',
+  GET_INVENTORY_PRODUCT: 'api/product/get_data_inventory_by_category',
+  GET_PERMISSIONS_ACTIVE_ONLY: 'api/admin/permission/get',
+  ADD_SUB_USER: 'api/user/add_sub_user',
+  EDIT_SUB_USER: 'api/user/edit_sub_user',
+  GET_ALL_SUB_USERS: '/api/user/get_sub_user',
+  DELETE_SUB_USER: '/api/user/delete_sub_user?',
+  ORDER_BUY_CART: 'api/order/add',
+  SEND_SUB_USER_EMAIL_OTP: 'api/user/send_otp_to_email',
+  VERIFY_SUB_USER_EMAIL: 'api/user/verfy_otp_with_email',
+  SUB_CATEGORY_BY_ID: 'api/category/get_subcategory_by_cat_id',
+
+  // location
+  ADD_OUTLET: 'api/user/add_warehouse_or_retailer_address_data',
+  EDIT_WAREHOUSE_OUTLET: 'api/user/edit_warehouse_or_retailer_address_data'
+};
+
+export { API_CONSTANT };

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>507918062316-r49ga12me7up3qh27i8ck1sh6p5s10nt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.507918062316-r49ga12me7up3qh27i8ck1sh6p5s10nt</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>507918062316-6rlpb5n89j3u1ctkn5it556k9ppvcsou.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA_nD67fboxAQMokYyf5_P4mIM9u1OW7vo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>507918062316</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.alqutubaldhahabi.supplymatch</string>
+	<key>PROJECT_ID</key>
+	<string>aqad-notification</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aqad-notification.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:507918062316:ios:3483b2ab73de0a67bccbc9</string>
+	<key>DATABASE_URL</key>
+	<string>https://aqad-notification-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
