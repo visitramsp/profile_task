@@ -13,6 +13,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import ImageCropPicker from 'react-native-image-crop-picker';
+import { Colors } from '../../theme';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -71,7 +72,9 @@ export default function YourAccountScreen() {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container}
+    
+    >
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <ArrowLeft />
@@ -147,7 +150,7 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter Name"
-                      style={styles.input}
+                      style={[styles.input, touched.name && errors.name && {borderColor:Colors.red}]}
                       value={values.name}
                       onChangeText={handleChange('name')}
                     />
@@ -210,7 +213,8 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter email"
-                      style={styles.input}
+                      style={[styles.input,[touched.email && errors.email && {borderColor:Colors.red}]]}
+                      
                       value={values.email}
                       onChangeText={handleChange('email')}
                     />
@@ -273,7 +277,8 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter password"
-                      style={styles.input}
+                       style={[styles.input,[touched.password && errors.password && {borderColor:Colors.red}]]}
+                      
                       value={values.password}
                       onChangeText={handleChange('password')}
                     />
@@ -336,7 +341,8 @@ export default function YourAccountScreen() {
                   <View style={styles.inputFieldView}>
                     <TextInput
                       placeholder="Enter username"
-                      style={styles.input}
+                      style={[styles.input,[touched.username && errors.username && {borderColor:Colors.red}]]}
+                      
                       value={values.username}
                       onChangeText={handleChange('username')}
                     />
